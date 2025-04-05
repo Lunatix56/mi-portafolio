@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login y Registro</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-section">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="username" placeholder="Usuario/Email">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="login()">Iniciar Sesión</button>
+        </div>
+
+        <div class="register-section">
+            <h2>Registrarse</h2>
+            <input type="email" id="register-email" placeholder="Correo Electrónico">
+            <input type="password" id="register-password" placeholder="Contraseña">
+            <button onclick="register()">Registrarse</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

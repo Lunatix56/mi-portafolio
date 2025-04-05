@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Firebase Scripts (Versión 8) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="portfolio-title">Mi Portafolio</h1>
+            <nav class="nav" id="main-nav">
+                <a href="#home">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#educacion">Educación</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#" id="login-nav">Login</a>
+                <a href="#" id="admin-nav" style="display: none; color: #ff9900;">Modo Admin</a>
+                <a href="#" id="logout-nav" style="display: none;">Cerrar Sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal del contenido -->
+    <main id="main-content">
+        <!-- Sección Home -->
+        <section id="home" class="section">
+            <div class="home-content">
+                <div class="profile-image-container">
+                    <img id="profile-image" src="img/default-profile.jpg" alt="Imagen de perfil">
+                    <div id="change-profile-image" class="edit-button" style="display: none;">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="home-text">
+                    <h2 id="home-title">Bienvenido a mi Portafolio</h2>
+                    <p id="home-description">Esta es la presentación de mi trabajo y habilidades profesionales.</p>
+                    <div id="edit-home" class="edit-button-container" style="display: none;">
+                        <button class="edit-button"><i class="fas fa-edit"></i> Editar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="section">
+            <h2>Sobre Mí</h2>
+            <div id="about-content">
+                <p>Información sobre mi experiencia y trayectoria profesional.</p>
+            </div>
+            <div id="edit-about" class="edit-button-container" style="display: none;">
+                <button class="edit-button"><i class="fas fa-edit"></i> Editar</button>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="section">
+            <h2>Mis Proyectos</h2>
+            <div id="projects-container" class="projects-grid">
+                <!-- Los proyectos se cargarán dinámicamente aquí -->
+            </div>
+            <div id="add-project" class="edit-button-container center-button" style="display: none;">
+                <button class="add-button"><i class="fas fa-plus"></i> Añadir Proyecto</button>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="section">
+            <h2>Mis Habilidades</h2>
+            <div id="skills-container" class="skills-container">
+                <!-- Las habilidades se cargarán dinámicamente aquí -->
+            </div>
+            <div id="edit-skills" class="edit-button-container" style="display: none;">
+                <button class="edit-button"><i class="fas fa-edit"></i> Editar Habilidades</button>
+            </div>
+        </section>
+
+        <!-- Sección Educación -->
+        <section id="educacion" class="section">
+            <h2>Educación</h2>
+            <div id="education-container" class="education-container">
+                <!-- La educación se cargará dinámicamente aquí -->
+            </div>
+            <div id="edit-education" class="edit-button-container" style="display: none;">
+                <button class="edit-button"><i class="fas fa-edit"></i> Editar Educación</button>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Sección de Login -->
+    <section id="login-container" class="login-section" style="display: none;">
+        <div class="login-container">
+            <div class="login-section">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="login-username" placeholder="Usuario">
+                <input type="password" id="login-password" placeholder="Contraseña">
+                <button id="login-button">Iniciar Sesión</button>
+                <p id="login-error" class="error-message"></p>
+            </div>
+            <button id="back-button">Volver a la página principal</button>
+        </div>
+    </section>
+
+    <!-- Modales para edición -->
+    <div id="edit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Editar</h2>
+            <div id="modal-form-container">
+                <!-- El formulario se generará dinámicamente -->
+            </div>
+            <div class="modal-buttons">
+                <button id="save-button" class="submit-button">Guardar</button>
+                <button id="cancel-button" class="cancel-button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para subir imagen -->
+    <div id="image-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cambiar Imagen de Perfil</h2>
+            <div class="image-upload-container">
+                <input type="file" id="image-upload" accept="image/*">
+                <div id="image-preview"></div>
+            </div>
+            <div class="modal-buttons">
+                <button id="upload-button" class="submit-button">Subir Imagen</button>
+                <button id="cancel-upload-button" class="cancel-button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Mi Portafolio Profesional. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Configuración de Firebase -->
+    <script>
+        // Configuración de Firebase - Recuerda reemplazar estos valores con tus credenciales reales
+        const firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "tu-proyecto.firebaseapp.com",
+            projectId: "tu-proyecto-id",
+            storageBucket: "tu-proyecto.appspot.com",
+            messagingSenderId: "tu-messaging-id",
+            appId: "tu-app-id"
+        };
+
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const storage = firebase.storage();
+    </script>
+
+    <!-- Scripts principales -->
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

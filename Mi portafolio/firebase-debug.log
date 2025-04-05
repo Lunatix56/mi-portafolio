@@ -1,0 +1,154 @@
+[debug] [2025-03-12T17:47:43.508Z] ----------------------------------------------------------------------
+[debug] [2025-03-12T17:47:43.511Z] Command:       C:\node.exe C:\Users\jupao\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-12T17:47:43.512Z] CLI Version:   13.32.0
+[debug] [2025-03-12T17:47:43.512Z] Platform:      win32
+[debug] [2025-03-12T17:47:43.512Z] Node Version:  v22.13.0
+[debug] [2025-03-12T17:47:43.512Z] Time:          Wed Mar 12 2025 11:47:43 GMT-0600 (hora estándar central)
+[debug] [2025-03-12T17:47:43.513Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-12T17:47:43.887Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-12T17:47:43.888Z] > authorizing via signed-in user (jupaolju@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jupao\Downloads\Mi portafolio
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-03-12T17:48:13.023Z] Using project from CLI flag: mi-portafolio-884ed
+[debug] [2025-03-12T17:48:13.027Z] Checked if tokens are valid: false, expires at: 1741118435571
+[debug] [2025-03-12T17:48:13.027Z] Checked if tokens are valid: false, expires at: 1741118435571
+[debug] [2025-03-12T17:48:13.028Z] > refreshing access token with scopes: []
+[debug] [2025-03-12T17:48:13.034Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-03-12T17:48:13.034Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-03-12T17:48:14.682Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-03-12T17:48:14.682Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-03-12T17:48:14.728Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mi-portafolio-884ed [none]
+[debug] [2025-03-12T17:48:15.206Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mi-portafolio-884ed 200
+[debug] [2025-03-12T17:48:15.206Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mi-portafolio-884ed {"projectId":"mi-portafolio-884ed","projectNumber":"527400011859","displayName":"mi portafolio","name":"projects/mi-portafolio-884ed","resources":{"hostingSite":"mi-portafolio-884ed","realtimeDatabaseInstance":"mi-portafolio-884ed-default-rtdb"},"state":"ACTIVE","etag":"1_47566851-3885-4cb7-bed2-cb0d0fa0b3f6"}
+[info] i  Using project mi-portafolio-884ed (mi portafolio) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-03-12T17:48:15.215Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:15.216Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:15.216Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/mi-portafolio-884ed/billingInfo [none]
+[debug] [2025-03-12T17:48:15.612Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/mi-portafolio-884ed/billingInfo 200
+[debug] [2025-03-12T17:48:15.612Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/mi-portafolio-884ed/billingInfo {"name":"projects/mi-portafolio-884ed/billingInfo","projectId":"mi-portafolio-884ed","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-03-12T17:48:15.615Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:15.615Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:15.616Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mi-portafolio-884ed/services/sqladmin.googleapis.com [none]
+[debug] [2025-03-12T17:48:15.616Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mi-portafolio-884ed/services/sqladmin.googleapis.com x-goog-quota-user=projects/mi-portafolio-884ed
+[debug] [2025-03-12T17:48:16.280Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mi-portafolio-884ed/services/sqladmin.googleapis.com 200
+[debug] [2025-03-12T17:48:16.281Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mi-portafolio-884ed/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] i  dataconnect\dataconnect.yaml is unchanged 
+[info] i  dataconnect\schema\schema.gql is unchanged 
+[info] i  dataconnect\connector\connector.yaml is unchanged 
+[info] i  dataconnect\connector\queries.gql is unchanged 
+[info] i  dataconnect\connector\mutations.gql is unchanged 
+[info] i  If you'd like to add the generated SDK to your app your, run firebase init dataconnect:sdk 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/mi-portafolio-884ed/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Apphosting Setup
+[debug] [2025-03-12T17:48:16.376Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:16.376Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:16.377Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/mi-portafolio-884ed/billingInfo [none]
+[debug] [2025-03-12T17:48:16.486Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/mi-portafolio-884ed/billingInfo 200
+[debug] [2025-03-12T17:48:16.486Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/mi-portafolio-884ed/billingInfo {"name":"projects/mi-portafolio-884ed/billingInfo","projectId":"mi-portafolio-884ed","billingAccountName":"","billingEnabled":false}
+[info] i  Writing default settings to apphosting.yaml... 
+[info] +  Wrote apphosting.yaml 
+[info] +  Create a new App Hosting backend with `firebase apphosting:backends:create` 
+[info] 
+=== Hosting Setup
+[debug] [2025-03-12T17:48:16.497Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:16.497Z] Checked if tokens are valid: true, expires at: 1741805293683
+[debug] [2025-03-12T17:48:16.498Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mi-portafolio-884ed [none]
+[debug] [2025-03-12T17:48:16.597Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mi-portafolio-884ed 200
+[debug] [2025-03-12T17:48:16.597Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mi-portafolio-884ed {"projectId":"mi-portafolio-884ed","projectNumber":"527400011859","displayName":"mi portafolio","name":"projects/mi-portafolio-884ed","resources":{"hostingSite":"mi-portafolio-884ed","realtimeDatabaseInstance":"mi-portafolio-884ed-default-rtdb"},"state":"ACTIVE","etag":"1_47566851-3885-4cb7-bed2-cb0d0fa0b3f6"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-03-12T17:48:48.030Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-03-12T17:48:48.237Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-03-12T17:48:48.238Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.4.0","browserURL":"https://www.gstatic.com/firebasejs/11.4.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.4.0/firebase.tgz"},"live":{"version":"11.4","browserURL":"https://www.gstatic.com/firebasejs/live/11.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.4/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.4.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.4.0/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.4.0/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.4.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.4.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.4.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.4.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.4.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.4.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.4.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.4.0/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.4.0/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.memory.js"}}
+[info] +  Wrote Y/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\jupao\Downloads\Mi portafolio is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=300839539&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-03-12T17:48:59.333Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-03-12T17:48:59.334Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-03-12T17:49:00.003Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-03-12T17:49:00.004Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-03-12T17:49:00.018Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-03-12T17:49:00.564Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-03-12T17:49:00.564Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Lunatix56","id":163772432,"node_id":"U_kgDOCcL4EA","avatar_url":"https://avatars.githubusercontent.com/u/163772432?v=4","gravatar_id":"","url":"https://api.github.com/users/Lunatix56","html_url":"https://github.com/Lunatix56","followers_url":"https://api.github.com/users/Lunatix56/followers","following_url":"https://api.github.com/users/Lunatix56/following{/other_user}","gists_url":"https://api.github.com/users/Lunatix56/gists{/gist_id}","starred_url":"https://api.github.com/users/Lunatix56/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Lunatix56/subscriptions","organizations_url":"https://api.github.com/users/Lunatix56/orgs","repos_url":"https://api.github.com/users/Lunatix56/repos","events_url":"https://api.github.com/users/Lunatix56/events{/privacy}","received_events_url":"https://api.github.com/users/Lunatix56/received_events","type":"User","user_view_type":"private","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":0,"public_gists":0,"followers":0,"following":0,"created_at":"2024-03-17T19:53:46Z","updated_at":"2025-02-10T14:17:56Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":0,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Lunatix56 
+[info] 
+[debug] [2025-03-12T17:49:20.642Z] >>> [apiv2][query] GET https://api.github.com/repos/Y/actions/secrets/public-key type=owner
+[debug] [2025-03-12T17:49:20.956Z] <<< [apiv2][status] GET https://api.github.com/repos/Y/actions/secrets/public-key 404
+[debug] [2025-03-12T17:49:20.956Z] <<< [apiv2][body] GET https://api.github.com/repos/Y/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-12T17:49:40.110Z] >>> [apiv2][query] GET https://api.github.com/repos/user/actions/secrets/public-key type=owner
+[debug] [2025-03-12T17:49:40.404Z] <<< [apiv2][status] GET https://api.github.com/repos/user/actions/secrets/public-key 404
+[debug] [2025-03-12T17:49:40.404Z] <<< [apiv2][body] GET https://api.github.com/repos/user/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-12T17:49:41.417Z] >>> [apiv2][query] GET https://api.github.com/repos/user/actions/secrets/public-key type=owner
+[debug] [2025-03-12T17:49:41.518Z] <<< [apiv2][status] GET https://api.github.com/repos/user/actions/secrets/public-key 404
+[debug] [2025-03-12T17:49:41.518Z] <<< [apiv2][body] GET https://api.github.com/repos/user/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-12T17:49:51.713Z] >>> [apiv2][query] GET https://api.github.com/repos/repository/actions/secrets/public-key type=owner
+[debug] [2025-03-12T17:49:52.215Z] <<< [apiv2][status] GET https://api.github.com/repos/repository/actions/secrets/public-key 404
+[debug] [2025-03-12T17:49:52.216Z] <<< [apiv2][body] GET https://api.github.com/repos/repository/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
